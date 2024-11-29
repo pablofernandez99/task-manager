@@ -32,3 +32,7 @@ cd client
 yarn 
 
 yarn dev
+
+## Configuring Environment Variables (.env)
+### Frontend:
+Create a .env file in the client directory with the following content:
