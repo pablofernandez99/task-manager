@@ -36,3 +36,5 @@ yarn dev
 ## Configuring Environment Variables (.env)
 ### Frontend:
 Create a .env file in the client directory with the following content:
+
+VITE_API_URL=URL_of_your_backend_server_here
