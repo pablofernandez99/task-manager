@@ -16,7 +16,7 @@ function App() {
   }
 
   const getTasks = async () => {
-    const getTasks = await fetch("http://localhost:8080")
+    const getTasks = await fetch(`${import.meta.env.VITE_API_URL}`)
     const data = await getTasks.json()
 
     console.log(data)
@@ -32,7 +32,7 @@ function App() {
     }
 
     if (updateID !== undefined && updateID !== null) {
-      await fetch("http://localhost:8080", {
+      await fetch(`${import.meta.env.VITE_API_URL}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -47,7 +47,7 @@ function App() {
       setUpdateID(null)
 
     } else {
-      await fetch("http://localhost:8080", {
+      await fetch(`${import.meta.env.VITE_API_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -70,7 +70,7 @@ function App() {
   }
 
   const handleDeleteTask = async (id) => {
-    await fetch("http://localhost:8080", {
+    await fetch(`${import.meta.env.VITE_API_URL}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
